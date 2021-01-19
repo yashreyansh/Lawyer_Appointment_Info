@@ -1,0 +1,365 @@
+{% load static %}
+{% static 'media' as baseURL %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> &mdash; Lawyer Appointment Info.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by QBOOTSTRAP.COM
+		
+	Website: 		http://qbootstrap.com/
+	Email: 			info@qbootstrap.com
+	Twitter: 		http://twitter.com/Q_bootstrap
+	Facebook: 		https://www.facebook.com/Qbootstrap
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="qbootstrap-loader"></div>
+	
+	<div id="page">
+		<nav class="qbootstrap-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="top">
+								<div class="row">
+									<div class="col-md-4 col-md-push-4 text-center">
+										<div id="qbootstrap-logo"><a href="/"><i class="icon-plus-outline"></i>Lawyer<span>Appoint</span></a></div>
+									</div>
+									<div class="col-md-4 col-md-pull-4">
+										<div class="num">
+											<span class="icon"><i class="icon-phone"></i></span>
+											<p><a href="#">111-222-333</a><br><a href="#">99-222-333</a></p>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="loc">
+											<span class="icon"><i class="icon-location"></i></span>
+											<p><a href="#">xyz main road (near sahara), ganj Lucknow -226000</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 text-center">
+							<div class="menu-1">
+								<ul>
+									<li class="active"><a href="/">Home</a></li>
+									<li><a href="/department/department">Departments</a></li>
+									<li><a href="/lawyers">Lawyers</a></li>
+									<li><a href="/contactUs">Contact</a></li>
+									{% if user.is_authenticated %}
+									<li>hello, {{user.first_name}}</li>
+									<li><a href="/accounts/logout">LogOut</a></li>
+									{% else %}
+									<li><a href="/accounts/register">Register</a></li>
+									<li><a href="/accounts/login">Login</a></li>
+									{% endif %}
+									<li class="btn-cta"><a href="/appoint/appoint"><span>Make an Appointment <i class="icon-calendar3"></i></span></a></li>
+									
+								</ul> 
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+	
+	<aside id="qbootstrap-hero">
+		<div class="flexslider">
+			<ul class="slides">
+		   	<li style="background-image: url(/static/images/lawyer-4.jpg);">
+		   		<div class="overlay"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1><strong>Contact</strong> Us</h1>
+									<h2><a href="" target="_blank"></a></h2>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside>
+
+	<div id="qbootstrap-intro">
+		<div class="row">
+			<div class="intro animate-box">
+				<div class="intro-grid color-1">
+					<span class="icon"><i class="icon-calendar3"></i></span>
+					<h3>Flexible Schedule</h3>
+					<p>Our consultants have various flexible schedules. And we can also work by private meetings if required besides the given time.</p>
+					<a href="#" class="btn btn-primary">Read More</a>
+				</div>
+				<div class="intro-grid color-2">
+					<span class="icon"><i class="icon-wallet2"></i></span>
+					<h3>Best Price Guarantee</h3>
+					<p>We offer the best price with respect to any other firm possibly near our expertise and experience.</p>
+					<a href="#" class="btn btn-primary">Read More</a>
+				</div>
+				<div class="intro-grid color-3">
+					<span class="icon"><i class="icon-clock3"></i></span>
+					<h3>Opening Hours</h3>
+					<p>
+						<span>Monday – Friday: 08.00 am – 06.00 pm</span><br>
+						<span>Saturday – Sunday: 08.00 am – 04.00 pm</span><br>
+						<span>Sunday: 08.00 am – 02.00 pm</span>
+					</p>
+					<a href="#" class="btn btn-primary">Book an Appointment</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="qbootstrap-contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 animate-box">
+					<h3>Contact Information</h3>
+					<div class="row contact-info-wrap">
+						<div class="col-md-3">
+							<p><span><i class="icon-location"></i></span>xyz main road (near sahara),<br> ganj Lucknow -226000</p>
+						</div>
+						<div class="col-md-3">
+							<p><span><i class="icon-phone"></i></span> <a href="tel://1234567890">+ 123 456 789 0</a></p>
+						</div>
+						<div class="col-md-3">
+							<p><span><i class="icon-mail"></i></span> <a href="mailto:shreyash434@gmail.com">shreyash434@gmail.com</a></p>
+						</div>
+						<div class="col-md-3">
+							<p><span><i class="icon-globe-outline"></i></span> <a href=""></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-10 col-md-offset-1 animate-box">
+					<h3>Get In Touch</h3>
+					<form action="" method="POST">
+						{% csrf_token %}
+						<div class="row form-group">
+							<div class="col-md-6">
+								<label for="fname">First Name</label>
+								<input type="text" name="first_name" class="form-control" placeholder="Your firstname">
+							</div>
+							<div class="col-md-6">
+								<label for="lname">Last Name</label>
+								<input type="text" name="last_name" class="form-control" placeholder="Your lastname">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="email">Email</label>
+								<input type="text" name="email" class="form-control" placeholder="Your email address">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="subject">Subject</label>
+								<input type="text" name="subject" class="form-control" placeholder="Your subject of this message">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="message">Message</label>
+								<textarea name="message" name="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+							</div>
+						</div>
+						<div class="form-group text-center">
+							<input type="submit" value="Send Message" class="btn btn-primary">
+						</div>
+						<div>
+							<h3>
+								{% for message in messages %}
+								{{message}}
+								{% endfor %}
+							</h3>
+						</div>
+					</form>		
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+
+	<div id="qbootstrap-register" style="background-image: url(static/images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 animate-box">
+					<div class="date-counter text-center">
+						<h2>We offer <strong class="color">Free Consultation</strong></h2>
+						<h3>By Mr. <strong>Miss Smith</strong></h3>
+						<!--<p class="countdown">
+							<span id="days"></span>
+							<span id="hours"></span>
+							<span id="minutes"></span>
+							<span id="seconds"></span>
+						</p>-->
+						<p><strong>Limited offer, Hurry Up!</strong></p>
+						<p><a href="/appoint/appoint" class="btn btn-primary btn-lg">Book an Appointment <i class="icon-calendar3"></i></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="qbootstrap-footer" role="contentinfo">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 qbootstrap-widget">
+					<h3>About</h3>
+					<p>Out firm has the motive to help the people in need of justice. We stand strong with those people who are correct.</p>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-6 qbootstrap-widget">
+					<h3>Links</h3>
+					<ul class="qbootstrap-footer-links">
+						<li><a href="/">Home</a></li>
+						<li><a href="/department/department">Department</a></li>
+						<li><a href="/lawyers">Lawyers</a></li>
+						<li><a href="/contactUs">Contact</a></li>
+						<li><a href="/appoint/appoint">Appointment</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 col-sm-4 col-xs-6 qbootstrap-widget">
+					<h3>Our Services</h3>
+					<ul class="qbootstrap-footer-links">
+						<li><a href="/department/department">Divorce Case</a></li>
+						<li><a href="/department/department">Elder Law</a></li>
+						<li><a href="/department/department">Criminal Law</a></li>
+						<li><a href="/department/department">Banking Law</a></li>
+						<li><a href="/department/department">Help Desk</a></li>
+					</ul>
+				</div>
+
+				<!--<div class="col-md-5 col-sm-4 col-xs-12 qbootstrap-widget">
+					<h3>Let's Talk</h3>
+
+					<form class="contact-form">
+						<div class="form-group">
+							<label for="name" class="sr-only">Name</label>
+							<input type="name" class="form-control" id="name" placeholder="Name">
+						</div>
+						<div class="form-group">
+							<label for="email" class="sr-only">Email</label>
+							<input type="email" class="form-control" id="email" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="message" class="sr-only">Message</label>
+							<textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" id="btn-submit" class="btn btn-primary btn-send-message btn-md" value="Send Message">
+						</div>
+					</form>
+				</div>-->
+			</div>
+		</div>
+		<div class="row copyright">
+			<div class="col-md-12 text-center">
+				<p>
+                    <small class="block">&copy;All Rights Reserved.</small> 
+                    <small class="block">Designed by <a href="#" target="_blank">yashreyansh</a></small>
+                </p>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+	<!-- countTo -->
+	<script src="{% static 'js/jquery.countTo.js' %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/magnific-popup-options.js' %}"></script>
+	<!-- Sticky Kit -->
+	<script src="{% static 'js/sticky-kit.min.js' %}"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="{% static 'js/google_map.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
+
